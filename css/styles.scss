@@ -1,5 +1,42 @@
 @import "base/index";
 
+// Flex NavBar
+
+header {
+  background: white;
+  height: 51px;
+  border-bottom: 1px solid black;
+}
+
+.flex-container {
+  opacity: 0.5;
+  width: 979px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+    ul {
+      display: flex;
+    }
+    li {
+      padding: 10px;
+      list-style-type: none;
+    }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  width: 3em;
+  align-items: center;
+}
+
+// Body
+
 .container {
   display: flex;
 }
@@ -7,6 +44,7 @@
 .main {
   background-image: url('../img/tree.jpg');
   flex-grow: 1;
-  height: 1000px;
+  height: 1150px;
   background-size: cover;
+  background-position: top;
 }

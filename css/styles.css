@@ -3,13 +3,41 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   box-sizing: border-box; }
 
+header {
+  background: white;
+  height: 51px;
+  border-bottom: 1px solid black; }
+
+.flex-container {
+  opacity: 0.5;
+  width: 979px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px; }
+  .flex-container ul {
+    display: flex; }
+  .flex-container li {
+    padding: 10px;
+    list-style-type: none; }
+
+a:link {
+  text-decoration: none; }
+
+.logo {
+  display: flex;
+  width: 3em;
+  align-items: center; }
+
 .container {
   display: flex; }
 
 .main {
   background-image: url("../img/tree.jpg");
   flex-grow: 1;
-  height: 1000px;
-  background-size: cover; }
+  height: 1150px;
+  background-size: cover;
+  background-position: top; }
 
 /*# sourceMappingURL=styles.css.map */
