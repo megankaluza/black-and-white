@@ -28,6 +28,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 52px;
+    a{
+      color: black;
+    }
     ul {
       display: flex;
     }
@@ -163,6 +166,17 @@ footer {
   margin-bottom: 1em;
   align-self: flex-end;
   align-items: center;
+}
+
+.text {
+  color: red;
+  font-family: $stack-molle;
+  font-size: 2em;
+  margin-top: 10em;
+  margin-left: 2em;
+  &:hover {
+    opacity: .5;
+  }
 }
 
 #imageOne {
