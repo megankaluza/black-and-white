@@ -37,13 +37,14 @@ a:link {
 
 .item {
   width: 200px;
-  height: 200px;
-  margin: 5px;
-  border: 2px solid black;
-  box-shadow: 0 3px 2px black;
+  height: 400px;
   flex-grow: 1; }
 
-.gallery {
+.galleryOne {
+  display: flex;
+  flex-wrap: wrap; }
+
+.galleryTwo {
   display: flex;
   flex-wrap: wrap; }
 
@@ -59,7 +60,9 @@ a:link {
   background-image: url("../img/city.jpg");
   background-size: cover;
   background-position: top;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  flex-basis: 400px;
+  flex-grow: 2; }
 
 #imageTwo {
   background-image: url("../img/ferris-wheel.jpg");
@@ -89,6 +92,8 @@ a:link {
   background-image: url("../img/clock.jpg");
   background-size: cover;
   background-position: top;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  flex-basis: 400px;
+  flex-grow: 2; }
 
 /*# sourceMappingURL=styles.css.map */
