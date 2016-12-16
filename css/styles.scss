@@ -1,0 +1,12 @@
+@import "base/index";
+
+.container {
+  display: flex;
+}
+
+.main {
+  background-image: url('../img/tree.jpg');
+  flex-grow: 1;
+  height: 1000px;
+  background-size: cover;
+}
