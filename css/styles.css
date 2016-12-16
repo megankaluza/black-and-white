@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Molle:400i");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 header {
+  font-family: "Molle", cursive;
   background: white;
   height: 51px;
   border-bottom: 1px solid black; }
@@ -33,11 +35,60 @@ a:link {
 .container {
   display: flex; }
 
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  border: 2px solid black;
+  box-shadow: 0 3px 2px black;
+  flex-grow: 1; }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap; }
+
 .main {
   background-image: url("../img/tree.jpg");
   flex-grow: 1;
   height: 1150px;
   background-size: cover;
-  background-position: top; }
+  background-position: top;
+  background-repeat: no-repeat; }
+
+#imageOne {
+  background-image: url("../img/city.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
+
+#imageTwo {
+  background-image: url("../img/ferris-wheel.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
+
+#imageThree {
+  background-image: url("../img/rose.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
+
+#imageFour {
+  background-image: url("../img/guitar.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
+
+#imageFive {
+  background-image: url("../img/train.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
+
+#imageSix {
+  background-image: url("../img/clock.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
 
 /*# sourceMappingURL=styles.css.map */

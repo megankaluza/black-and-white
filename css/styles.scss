@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Molle:400i');
+
 @import "base/index";
 
 // Flex NavBar
 
 header {
+  font-family: $stack-molle;
   background: white;
   height: 51px;
   border-bottom: 1px solid black;
@@ -41,10 +44,67 @@ a:link {
   display: flex;
 }
 
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  border: 2px solid black;
+  box-shadow: 0 3px 2px black;
+  flex-grow: 1;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .main {
-  background-image: url('../img/tree.jpg');
+  background-image: url('#{$path-img}/tree.jpg');
   flex-grow: 1;
   height: 1150px;
   background-size: cover;
   background-position: top;
+  background-repeat: no-repeat;
+}
+
+#imageOne {
+  background-image: url('#{$path-img}/city.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#imageTwo {
+  background-image: url('#{$path-img}/ferris-wheel.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#imageThree {
+  background-image: url('#{$path-img}/rose.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#imageFour {
+  background-image: url('#{$path-img}/guitar.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#imageFive {
+  background-image: url('#{$path-img}/train.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+#imageSix {
+  background-image: url('#{$path-img}/clock.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
