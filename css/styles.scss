@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Molle:400i');
+@import url('https://fonts.googleapis.com/css?family=Molle:400i|Reem+Kufi');
 
 @import "base/index";
 
 // Flex NavBar
 
 header {
-  font-family: $stack-molle;
+  font-family: $stack-kufi;
+  // text-transform: uppercase;
   background: white;
   height: 51px;
   border-bottom: 1px solid black;
 }
 
 nav {
-  font-family: $stack-molle;
+  font-family: $stack-kufi;
+  text-transform: uppercase;
   background: white;
   height: 51px;
   border-bottom: 1px solid black;
@@ -35,6 +37,42 @@ nav {
     }
 }
 
+.flex-container a:before,
+.flex-container a:after {
+  // display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.flex-container a:before {
+    margin-right: 5px;
+    content: '[';
+    -webkit-transform: translate(20px);
+    -moz-transform: translate(20px);
+    transform: translate(20px);
+}
+
+.flex-container a:after {
+    margin-left: 5px;
+    content: ']';
+    -webkit-transform: translate(-20px);
+    -moz-transform: translate(-20px);
+    transform: translate(-20px);
+}
+
+.flex-container a:hover:before,
+.flex-container a:hover:after,
+.flex-container a:focus:before,
+.flex-container a:focus:after {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+    -moz-transform: translate(0px);
+    transform: translate(0px);
+}
+
+
 a:link {
   text-decoration: none;
 }
@@ -48,8 +86,8 @@ a:link {
 // Body
 
 h2 {
+  display: block;
   font-family: $stack-molle;
-  text-align: center;
   position: absolute;
   font-size: 75px;
   line-height: 120px;
@@ -58,9 +96,9 @@ h2 {
 }
 
 span {
+  display: block;
   color: white;
   font-family: $stack-molle;
-  text-align: center;
   position: absolute;
   font-size: 40px;
   top: 400px;
@@ -106,6 +144,19 @@ footer {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+}
+
+.play {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  opacity: .5;
+  width: 100px;
+  top: 500px;
+  left: 100px;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .search {
