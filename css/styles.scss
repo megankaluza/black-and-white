@@ -11,6 +11,13 @@ header {
   border-bottom: 1px solid black;
 }
 
+nav {
+  font-family: $stack-molle;
+  background: white;
+  height: 51px;
+  border-bottom: 1px solid black;
+}
+
 .flex-container {
   opacity: 0.5;
   width: 979px;
@@ -72,6 +79,12 @@ a:link {
   background-repeat: no-repeat;
 }
 
+.search {
+  margin-bottom: 1em;
+  align-self: flex-end;
+  align-items: center;
+}
+
 #imageOne {
   background-image: url('#{$path-img}/city.jpg');
   background-size: cover;
@@ -86,8 +99,6 @@ a:link {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  // flex-basis: 550px;
-  // flex-grow: 1;
 }
 
 #imageThree {
@@ -95,8 +106,6 @@ a:link {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  // flex-basis: 550px;
-  // flex-grow: 1;
 }
 
 #imageFour {
@@ -104,8 +113,6 @@ a:link {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  // flex-basis: 550px;
-  // flex-grow: 1;
 }
 
 #imageFive {
@@ -113,8 +120,6 @@ a:link {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  // flex-basis: 550px;
-  // flex-grow: 1;
 }
 
 #imageSix {

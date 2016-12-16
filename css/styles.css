@@ -10,6 +10,12 @@ header {
   height: 51px;
   border-bottom: 1px solid black; }
 
+nav {
+  font-family: "Molle", cursive;
+  background: white;
+  height: 51px;
+  border-bottom: 1px solid black; }
+
 .flex-container {
   opacity: 0.5;
   width: 979px;
@@ -55,6 +61,11 @@ a:link {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat; }
+
+.search {
+  margin-bottom: 1em;
+  align-self: flex-end;
+  align-items: center; }
 
 #imageOne {
   background-image: url("../img/city.jpg");
