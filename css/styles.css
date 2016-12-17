@@ -4,32 +4,48 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   box-sizing: border-box; }
 
-header {
+.flex-container, .flex-container ul, .logo, .container, .galleryOne, .galleryTwo {
+  display: flex; }
+
+.main, #imageOne, #imageTwo, #imageThree, #imageFour, #imageFive, #imageSix {
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
+
+.mainText, .text {
+  color: #C1292E;
+  font-family: "Molle", cursive;
+  font-size: 2em;
+  margin-top: 10em;
+  margin-left: 2em; }
+
+header, nav {
   font-family: "Reem Kufi", sans-serif;
-  background: white;
+  background: #FFFFFF;
   height: 51px;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid #000000; }
+
+footer {
+  font-family: "Molle", cursive;
+  background: #FFFFFF;
+  height: 51px;
+  border-bottom: 1px solid #000000;
+  text-align: center;
+  margin-top: 3em; }
 
 nav {
   display: block;
-  font-family: "Reem Kufi", sans-serif;
-  text-transform: uppercase;
-  background: white;
-  height: 51px;
-  border-bottom: 1px solid black; }
+  text-transform: uppercase; }
 
 .flex-container {
   opacity: 0.5;
   width: 979px;
   margin: 0 auto;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 52px; }
   .flex-container a {
-    color: black; }
-  .flex-container ul {
-    display: flex; }
+    color: #000000; }
   .flex-container li {
     padding: 10px;
     list-style-type: none; }
@@ -68,12 +84,16 @@ a:link {
   text-decoration: none; }
 
 .logo {
-  display: flex;
   width: 3em;
   align-items: center; }
 
+.search {
+  margin-bottom: 1em;
+  align-self: flex-end;
+  align-items: center;
+  text-align: center; }
+
 h2 {
-  display: block;
   font-family: "Molle", cursive;
   position: absolute;
   font-size: 75px;
@@ -82,24 +102,12 @@ h2 {
   left: 300px; }
 
 span {
-  display: block;
-  color: white;
   font-family: "Molle", cursive;
+  color: #FFFFFF;
   position: absolute;
   font-size: 40px;
   top: 400px;
   left: 600px; }
-
-footer {
-  font-family: "Molle", cursive;
-  background: white;
-  height: 51px;
-  border-bottom: 1px solid black;
-  text-align: center;
-  margin-top: 3em; }
-
-.container {
-  display: flex; }
 
 .item {
   width: 200px;
@@ -107,20 +115,15 @@ footer {
   flex-grow: 1; }
 
 .galleryOne {
-  display: flex;
   flex-wrap: wrap; }
 
 .galleryTwo {
-  display: flex;
   flex-wrap: wrap; }
 
 .main {
   background-image: url("../img/tree.jpg");
   flex-grow: 1;
-  height: 1150px;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat; }
+  height: 1150px; }
 
 .play {
   display: block;
@@ -133,67 +136,29 @@ footer {
   .play:hover {
     opacity: 1; }
 
-.search {
-  margin-bottom: 1em;
-  align-self: flex-end;
-  align-items: center;
-  text-align: center; }
-
-.text {
-  color: #C1292E;
-  font-family: "Molle", cursive;
-  font-size: 2em;
-  margin-top: 10em;
-  margin-left: 2em; }
-
-.mainText {
-  color: #C1292E;
-  font-family: "Molle", cursive;
-  font-size: 2em;
-  margin-top: 10em;
-  margin-left: 2em; }
-
 #imageOne {
   background-image: url("../img/city.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
   flex-basis: 400px;
   flex-grow: 2; }
 
 #imageTwo {
-  background-image: url("../img/ferris-wheel.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat; }
+  background-image: url("../img/ferris-wheel.jpg"); }
 
 #imageThree {
-  background-image: url("../img/rose.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat; }
+  background-image: url("../img/rose.jpg"); }
 
 #imageFour {
-  background-image: url("../img/guitar.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat; }
+  background-image: url("../img/guitar.jpg"); }
 
 #imageFive {
-  background-image: url("../img/train.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat; }
+  background-image: url("../img/train.jpg"); }
 
 #imageSix {
   background-image: url("../img/clock.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
   flex-basis: 400px;
   flex-grow: 2; }
 
-@media only screen and (min-width: 100px) and (max-width: 400px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (max-width: 400px) and (-webkit-min-device-pixel-ratio: 1) {
   .item {
     width: 200px;
     height: 400px;
@@ -201,9 +166,17 @@ footer {
     border: 2px solid black;
     box-shadow: 0 3px 2px black;
     flex-grow: 1; } }
-@media only screen and (min-width: 0px) and (max-width: 1160px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (max-width: 1170px) and (-webkit-min-device-pixel-ratio: 1) {
   nav {
     display: none; }
+
+  .main {
+    background-image: url("../img/tree.jpg");
+    flex-grow: 1;
+    height: 800px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat; }
 
   .mainText {
     color: #C1292E;
@@ -221,20 +194,12 @@ footer {
       left: 5px; }
     .mainText span {
       display: block;
-      color: white;
+      color: #FFFFFF;
       font-family: "Molle", cursive;
       position: absolute;
       font-size: .5em;
       top: 320px;
       left: 150px; }
-
-  .main {
-    background-image: url("../img/tree.jpg");
-    flex-grow: 1;
-    height: 800px;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat; }
 
   .play {
     display: block;

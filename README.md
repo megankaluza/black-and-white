@@ -4,7 +4,7 @@
 
 #### By _**Megan Kaluza**_
 
-![screenshot]
+![screenshot](screen_shot.png)
 
 ## Description
 
@@ -18,8 +18,8 @@ _Objectives_
 
 ## Setup/Installation Requirements
 
-* _Check out the GitHub Pages: https://megankaluza.github.io/flexbox-project_
-* _Clone this repository https://github.com/megankaluza/https://github.com/megankaluza/flexbox-project.git_
+* _Check out the GitHub Pages: https://megankaluza.github.io/black-white_
+* _Clone this repository https://github.com/megankaluza/https://github.com/megankaluza/black-white.git_
 * _gem install sass_
 * _sass --watch ._
 * _Open in browser of your choice_
@@ -37,7 +37,7 @@ _No known bugs at this time_
 * _HTML_
 * _CSS_
 * _SASS_
-* _Bootstrap_
+* _Flex Box_
 
 ### License
 

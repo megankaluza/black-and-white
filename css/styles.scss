@@ -1,95 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Molle:400i|Reem+Kufi');
 
 @import "base/index";
-
-// Flex NavBar
-
-header {
-  font-family: $stack-kufi;
-  background: white;
-  height: 51px;
-  border-bottom: 1px solid black;
-}
-
-nav {
-  display: block;
-  font-family: $stack-kufi;
-  text-transform: uppercase;
-  background: white;
-  height: 51px;
-  border-bottom: 1px solid black;
-}
-
-.flex-container {
-  opacity: 0.5;
-  width: 979px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 52px;
-    a{
-      color: black;
-    }
-    ul {
-      display: flex;
-    }
-    li {
-      padding: 10px;
-      list-style-type: none;
-    }
-}
-
-.flex-container a:before,
-.flex-container a:after {
-  // display: inline-block;
-  opacity: 0;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
-  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
-  transition: transform 0.3s, opacity 0.2s;
-}
-
-.flex-container a:before {
-    margin-right: 5px;
-    content: '[';
-    -webkit-transform: translate(20px);
-    -moz-transform: translate(20px);
-    transform: translate(20px);
-}
-
-.flex-container a:after {
-    margin-left: 5px;
-    content: ']';
-    -webkit-transform: translate(-20px);
-    -moz-transform: translate(-20px);
-    transform: translate(-20px);
-}
-
-.flex-container a:hover:before,
-.flex-container a:hover:after,
-.flex-container a:focus:before,
-.flex-container a:focus:after {
-    opacity: 1;
-    -webkit-transform: translate(0px);
-    -moz-transform: translate(0px);
-    transform: translate(0px);
-}
-
-
-a:link {
-  text-decoration: none;
-}
-
-.logo {
-  display: flex;
-  width: 3em;
-  align-items: center;
-}
+@import 'layout/index';
 
 // Body
-
 h2 {
-  display: block;
   font-family: $stack-molle;
   position: absolute;
   font-size: 75px;
@@ -99,26 +14,16 @@ h2 {
 }
 
 span {
-  display: block;
-  color: white;
   font-family: $stack-molle;
+  color:$white;
   position: absolute;
   font-size: 40px;
   top: 400px;
   left: 600px;
 }
 
-footer {
-  font-family: $stack-molle;
-  background: white;
-  height: 51px;
-  border-bottom: 1px solid black;
-  text-align: center;
-  margin-top: 3em;
-}
-
 .container {
-  display: flex;
+  @extend %flex;
 }
 
 .item {
@@ -128,22 +33,20 @@ footer {
 }
 
 .galleryOne {
-  display: flex;
+  @extend %flex;
   flex-wrap: wrap;
 }
 
 .galleryTwo {
-  display: flex;
+  @extend %flex;
   flex-wrap: wrap;
 }
 
 .main {
+  @extend %image;
   background-image: url('#{$path-img}/tree.jpg');
   flex-grow: 1;
   height: 1150px;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
 .play {
@@ -159,142 +62,116 @@ footer {
   }
 }
 
-.search {
-  margin-bottom: 1em;
-  align-self: flex-end;
-  align-items: center;
-  text-align: center;
+.mainText {
+  @extend %text;
 }
 
 .text {
-  color: $rose;
-  font-family: $stack-molle;
-  font-size: 2em;
-  margin-top: 10em;
-  margin-left: 2em;
-}
-
-.mainText {
-  color: $rose;
-  font-family: $stack-molle;
-  font-size: 2em;
-  margin-top: 10em;
-  margin-left: 2em;
+  @extend %text;
 }
 
 #imageOne {
+  @extend %image;
   background-image: url('#{$path-img}/city.jpg');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
   flex-basis: 400px;
   flex-grow: 2;
 }
 
 #imageTwo {
+  @extend %image;
   background-image: url('#{$path-img}/ferris-wheel.jpg');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
 #imageThree {
+  @extend %image;
   background-image: url('#{$path-img}/rose.jpg');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
 #imageFour {
+  @extend %image;
   background-image: url('#{$path-img}/guitar.jpg');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
 #imageFive {
+  @extend %image;
   background-image: url('#{$path-img}/train.jpg');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
 #imageSix {
+  @extend %image;
   background-image: url('#{$path-img}/clock.jpg');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
   flex-basis: 400px;
   flex-grow: 2;
 }
 
+// Mobile Media Query
 @media only screen
-  and (min-width: 100px)
-  and (max-width: 400px)
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .item {
-      width: 200px;
-      height: 400px;
-      margin: 10px;
-      border: 2px solid black;
-      box-shadow: 0 3px 2px black;
-      flex-grow: 1;
-    }
+and (max-width: 400px)
+and (-webkit-min-device-pixel-ratio: 1) {
+  .item {
+    width: 200px;
+    height: 400px;
+    margin: 10px;
+    border: 2px solid black;
+    box-shadow: 0 3px 2px black;
+    flex-grow: 1;
+  }
 }
 
+// Tablet Media Query
 @media only screen
-  and (min-width: 0px)
-  and (max-width: 1160px)
-  and (-webkit-min-device-pixel-ratio: 1) {
-    nav {
-      display: none;
-    }
+and (max-width: 1170px)
+and (-webkit-min-device-pixel-ratio: 1) {
+  // Flex NavBar
+  nav {
+    display: none;
+  }
 
-    .mainText {
-      color: $rose;
-      font-family: $stack-molle;
-      font-size: 2em;
-      margin-top: 10em;
-      margin-left: 10px;
-      h2 {
-        display: block;
-        font-family: $stack-molle;
-        position: absolute;
-        font-size: 1em;
-        line-height: 0;
-        top: 300px;
-        left: 5px;
-      }
-      span {
-        display: block;
-        color: white;
-        font-family: $stack-molle;
-        position: absolute;
-        font-size: .5em;
-        top: 320px;
-        left: 150px;
-      }
-    }
+  .main {
+    background-image: url('#{$path-img}/tree.jpg');
+    flex-grow: 1;
+    height: 800px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
 
-    .main {
-      background-image: url('#{$path-img}/tree.jpg');
-      flex-grow: 1;
-      height: 800px;
-      background-size: cover;
-      background-position: top;
-      background-repeat: no-repeat;
-    }
-
-    .play {
+  .mainText {
+    color: $rose;
+    font-family: $stack-molle;
+    font-size: 2em;
+    margin-top: 10em;
+    margin-left: 10px;
+    h2 {
       display: block;
-      position: relative;
-      margin: 0 auto;
-      opacity: .5;
-      width: 100px;
-      top: 100px;
-      left: 0;
-      &:hover {
-        opacity: 1;
-      }
+      font-family: $stack-molle;
+      position: absolute;
+      font-size: 1em;
+      line-height: 0;
+      top: 300px;
+      left: 5px;
+    }
+    span {
+      display: block;
+      color: $white;
+      font-family: $stack-molle;
+      position: absolute;
+      font-size: .5em;
+      top: 320px;
+      left: 150px;
     }
   }
+
+  .play {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    opacity: .5;
+    width: 100px;
+    top: 100px;
+    left: 0;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
