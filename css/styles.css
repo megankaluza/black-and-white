@@ -136,6 +136,9 @@ span {
   .play:hover {
     opacity: 1; }
 
+.text:hover {
+  opacity: .5; }
+
 #imageOne {
   background-image: url("../img/city.jpg");
   flex-basis: 400px;

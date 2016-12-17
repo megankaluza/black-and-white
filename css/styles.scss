@@ -68,6 +68,9 @@ span {
 
 .text {
   @extend %text;
+  &:hover {
+    opacity: .5;
+  }
 }
 
 #imageOne {
