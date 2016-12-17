@@ -18,7 +18,7 @@ _Objectives_
 
 ## Setup/Installation Requirements
 
-* _Check out the GitHub Pages: https://megankaluza.github.io/black-white_
+* _Check out the GitHub Pages: https://megankaluza.github.io/black-white/_
 * _Clone this repository https://github.com/megankaluza/https://github.com/megankaluza/black-white.git_
 * _gem install sass_
 * _sass --watch ._
