@@ -6,13 +6,13 @@
 
 header {
   font-family: $stack-kufi;
-  // text-transform: uppercase;
   background: white;
   height: 51px;
   border-bottom: 1px solid black;
 }
 
 nav {
+  display: block;
   font-family: $stack-kufi;
   text-transform: uppercase;
   background: white;
@@ -124,9 +124,6 @@ footer {
 .item {
   width: 200px;
   height: 400px;
-  // margin: 5px;
-  // border: 2px solid black;
-  // box-shadow: 0 3px 2px black;
   flex-grow: 1;
 }
 
@@ -155,7 +152,7 @@ footer {
   margin: 0 auto;
   opacity: .5;
   width: 100px;
-  top: 500px;
+  top: 200px;
   left: 100px;
   &:hover {
     opacity: 1;
@@ -166,17 +163,23 @@ footer {
   margin-bottom: 1em;
   align-self: flex-end;
   align-items: center;
+  text-align: center;
 }
 
 .text {
-  color: red;
+  color: $rose;
   font-family: $stack-molle;
   font-size: 2em;
   margin-top: 10em;
   margin-left: 2em;
-  &:hover {
-    opacity: .5;
-  }
+}
+
+.mainText {
+  color: $rose;
+  font-family: $stack-molle;
+  font-size: 2em;
+  margin-top: 10em;
+  margin-left: 2em;
 }
 
 #imageOne {
@@ -224,3 +227,74 @@ footer {
   flex-basis: 400px;
   flex-grow: 2;
 }
+
+@media only screen
+  and (min-width: 100px)
+  and (max-width: 400px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .item {
+      width: 200px;
+      height: 400px;
+      margin: 10px;
+      border: 2px solid black;
+      box-shadow: 0 3px 2px black;
+      flex-grow: 1;
+    }
+}
+
+@media only screen
+  and (min-width: 0px)
+  and (max-width: 1160px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    nav {
+      display: none;
+    }
+
+    .mainText {
+      color: $rose;
+      font-family: $stack-molle;
+      font-size: 2em;
+      margin-top: 10em;
+      margin-left: 10px;
+      h2 {
+        display: block;
+        font-family: $stack-molle;
+        position: absolute;
+        font-size: 1em;
+        line-height: 0;
+        top: 300px;
+        left: 5px;
+      }
+      span {
+        display: block;
+        color: white;
+        font-family: $stack-molle;
+        position: absolute;
+        font-size: .5em;
+        top: 320px;
+        left: 150px;
+      }
+    }
+
+    .main {
+      background-image: url('#{$path-img}/tree.jpg');
+      flex-grow: 1;
+      height: 800px;
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+
+    .play {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      opacity: .5;
+      width: 100px;
+      top: 100px;
+      left: 0;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
