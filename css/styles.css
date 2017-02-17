@@ -22,7 +22,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 header, nav {
   font-family: "Reem Kufi", sans-serif;
   background: #FFFFFF;
-  height: 51px;
   border-bottom: 1px solid #000000; }
 
 footer {
@@ -39,7 +38,6 @@ nav {
 
 .flex-container {
   opacity: 0.5;
-  width: 979px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
@@ -141,7 +139,6 @@ span {
 
 #imageOne {
   background-image: url("../img/city.jpg");
-  flex-basis: 400px;
   flex-grow: 2; }
 
 #imageTwo {
@@ -158,18 +155,17 @@ span {
 
 #imageSix {
   background-image: url("../img/clock.jpg");
-  flex-basis: 400px;
   flex-grow: 2; }
 
-@media only screen and (max-width: 400px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (max-width: 400px) {
   .item {
-    width: 200px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     margin: 10px;
     border: 2px solid black;
     box-shadow: 0 3px 2px black;
     flex-grow: 1; } }
-@media only screen and (max-width: 1170px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (max-width: 1070px) {
   nav {
     display: none; }
 
